@@ -35,7 +35,7 @@ restService.post("/test", function(req, res) {
 
 restService.post("/audio", function(req, res) {
   var speech = "";
-  switch (req.body.result.parameters.AudioSample.toLowerCase()) {
+  switch (req.body.queryResult.parameters.AudioSample.toLowerCase()) {
     //Speech Synthesis Markup Language 
     case "music one":
       speech =
@@ -120,8 +120,14 @@ restService.post("/audio", function(req, res) {
       break;
   }
   return res.json({
-    speech: speech,
-    displayText: speech,
+    fulfillmentText: speech,
+    fulfillmentMessages: [
+      {
+        text: {
+          text: [speech]
+        }
+      }
+    ],
     source: "test-assistant"
   });
 });
