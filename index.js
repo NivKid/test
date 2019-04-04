@@ -17,20 +17,20 @@ function pickRandom(messages) {
   return messages[Math.floor(Math.random() * messages.length)];
 }
 
-const rhymes = {
+const rhymes = [
   {
       text: "twinkle twinkle little star",
-      speech:'<speak><audio  clipBegin="18s" clipEnd="133s" src="https://firebasestorage.googleapis.com/v0/b/test-audio-b2355.appspot.com/o/650371554320612.ogg?alt=media&amp;token=6a1153a6-e459-4c99-b1c2-d72bda3bfbc8">did not get your audio file</audio></speak>',
+      speech:'<speak><audio  clipBegin=\"18s\" clipEnd=\"133s\" src=\"https://firebasestorage.googleapis.com/v0/b/test-audio-b2355.appspot.com/o/650371554320612.ogg?alt=media&amp;token=6a1153a6-e459-4c99-b1c2-d72bda3bfbc8\">did not get your audio file</audio></speak>',
   },
-};
+];
 
-const numbers = {
+const numbers = [
   {
-      text: "reverse countdown",
+      text: "revese countdown",
       speech:'<speak><audio src="https://firebasestorage.googleapis.com/v0/b/test-audio-b2355.appspot.com/o/302301554324840.ogg?alt=media&amp;token=b27592e5-029e-468b-b456-4cf836aabfde">did not get your audio file</audio></speak>'
   },
 
-};
+];
 
 restService.post("/test", function(req, res) {
   var speech =
