@@ -14,7 +14,8 @@ restService.use(
 restService.use(bodyParser.json());
 
 function pickRandom(messages) {
-  return Math.floor(Math.random() * messages.length);
+  const temp = Math.floor(Math.random() * messages.length);
+  return temp;
 }
 
 const rhymes = [
@@ -27,9 +28,8 @@ const rhymes = [
 const numbers = [
   {
       "text" : "revese countdown",
-      "oggUrl" : "https://firebasestorage.googleapis.com/v0/b/test-audio-b2355.appspot.com/o/302301554324840.ogg?alt=media&amp;token=b27592e5-029e-468b-b456-4cf836aabfde"
+      "oggUrl" : "https://firebasestorage.googleapis.com/v0/b/test-audio-b2355.appspot.com/o/302301554324840.ogg?alt=media&amp;token=b27592e5-029e-468b-b456-4cf836aabfde",
   },
-
 ];
 
 restService.post("/test", function(req, res) {
