@@ -56,14 +56,13 @@ restService.post("/audio", function(req, res) {
   var speech = "";
   switch (req.body.queryResult.parameters.AudioSample.toLowerCase()) {
     case "rhyme":
-    const msg = pickRandom(rhymes);
-      speech = msg.speech;
+    //const msg = pickRandom(rhymes);
+      speech = rhymes.speech;
       break;
     case "numbers":
-    const msg = pickRandom(numbers);
-      speech = msg.speech;
+    //const msg = pickRandom(numbers);
+      speech = numbers.speech;
       break;
-  
   }
   return res.json({
     fulfillmentText: speech,
