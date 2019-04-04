@@ -56,8 +56,8 @@ restService.post("/audio", function(req, res) {
   var speech = "";
   switch (req.body.queryResult.parameters.AudioSample.toLowerCase()) {
     case "rhyme":
-    //const msg = pickRandom(rhymes);
-      speech = `<speak><audio src="${rhymes[0].oggUrl}">${rhymes[0].text}</audio></speak>`;
+     msg = pickRandom(rhymes);
+      speech = `<speak><audio src="${msg.oggUrl}">${msg.text}</audio></speak>`;
       break;
     case "numbers":
     //const msg = pickRandom(numbers);
