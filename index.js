@@ -24,7 +24,7 @@ const rhymes = [
   },
 ];
 
-const numbmers = [
+const numbers = [
   {
       text: "reverse countdown",
       speech:'<speak><audio src="https://firebasestorage.googleapis.com/v0/b/test-audio-b2355.appspot.com/o/302301554324840.ogg?alt=media&amp;token=b27592e5-029e-468b-b456-4cf836aabfde">did not get your audio file</audio></speak>'
@@ -56,11 +56,11 @@ restService.post("/audio", function(req, res) {
   var speech = "";
   switch (req.body.queryResult.parameters.AudioSample.toLowerCase()) {
     case "rhyme":
-    const msg = pickRandomMessage(rhymes);
+    const msg = pickRandom(rhymes);
       speech = msg.speech;
       break;
     case "numbers":
-    const msg = pickRandomMessage(numbers);
+    const msg = pickRandom(numbers);
       speech = msg.speech;
       break;
   
