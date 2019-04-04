@@ -62,7 +62,7 @@ restService.post("/audio", function(req, res) {
       break;
     case "numbers":
       r = pickRandom(numbers);
-      speech = `<speak><audio src="${numbers[0].oggUrl}">${r}</audio></speak>`;
+      speech = `<speak><audio src="${numbers[r].oggUrl}">${r}</audio></speak>`;
       //speech =<speak><s><audio src="${msg.oggUrl}">did not get your audio file</audio></s>${msg.text}</speak>';
       break;
   }
