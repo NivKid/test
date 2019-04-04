@@ -13,6 +13,25 @@ restService.use(
 
 restService.use(bodyParser.json());
 
+function pickRandom(messages) {
+  return messages[Math.floor(Math.random() * messages.length)];
+}
+
+const rhymes = [
+  {
+      text: "twinkle twinkle little star",
+      speech:'<speak><audio  clipBegin="18s" clipEnd="133s" src="https://firebasestorage.googleapis.com/v0/b/test-audio-b2355.appspot.com/o/650371554320612.ogg?alt=media&amp;token=6a1153a6-e459-4c99-b1c2-d72bda3bfbc8">did not get your audio file</audio></speak>',
+  },
+];
+
+const numbmers = [
+  {
+      text: "reverse countdown",
+      speech:'<speak><audio src="https://firebasestorage.googleapis.com/v0/b/test-audio-b2355.appspot.com/o/302301554324840.ogg?alt=media&amp;token=b27592e5-029e-468b-b456-4cf836aabfde">did not get your audio file</audio></speak>'
+  },
+
+];
+
 restService.post("/test", function(req, res) {
   var speech =
     req.body.queryResult &&
@@ -37,12 +56,12 @@ restService.post("/audio", function(req, res) {
   var speech = "";
   switch (req.body.queryResult.parameters.AudioSample.toLowerCase()) {
     case "rhyme":
-      speech =
-        '<speak><audio  clipBegin="18s" clipEnd="133s" src="https://firebasestorage.googleapis.com/v0/b/test-audio-b2355.appspot.com/o/650371554320612.ogg?alt=media&amp;token=6a1153a6-e459-4c99-b1c2-d72bda3bfbc8">did not get your audio file</audio></speak>';
+    const msg = pickRandomMessage(rhymes);
+      speech = msg.speech;
       break;
     case "numbers":
-      speech =
-        '<speak><audio src="https://firebasestorage.googleapis.com/v0/b/test-audio-b2355.appspot.com/o/302301554324840.ogg?alt=media&amp;token=b27592e5-029e-468b-b456-4cf836aabfde">did not get your audio file</audio></speak>';
+    const msg = pickRandomMessage(numbers);
+      speech = msg.speech;
       break;
   
   }
