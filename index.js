@@ -23,12 +23,20 @@ const rhymes = [
       "text" : "twinkle twinkle little star",
       "oggUrl" : "https://firebasestorage.googleapis.com/v0/b/test-audio-b2355.appspot.com/o/twinkle.ogg?alt=media&amp;token=0b292126-b2b6-416f-8f17-f3f111af9fac",
   },
+  {
+    "text" : "ba ba black sheep",
+    "oggUrl" : "https://firebasestorage.googleapis.com/v0/b/test-audio-b2355.appspot.com/o/baba.ogg?alt=media&token=58e036f5-05a0-46be-bd49-edb51e74f37b",
+  },
 ];
 
 const numbers = [
   {
-      "text" : "revese countdown",
+      "text" : "countdown from 10",
       "oggUrl" : "https://firebasestorage.googleapis.com/v0/b/test-audio-b2355.appspot.com/o/302301554324840.ogg?alt=media&amp;token=b27592e5-029e-468b-b456-4cf836aabfde",
+  },
+  {
+    "text" : "count from 1 to 50",
+    "oggUrl" : "https://firebasestorage.googleapis.com/v0/b/test-audio-b2355.appspot.com/o/50.ogg?alt=media&amp;token=e635b388-d48a-479b-9666-6755ecdf5810",
   },
 ];
 
