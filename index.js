@@ -25,7 +25,7 @@ const rhymes = [
   },
   {
     "text" : "ba ba black sheep",
-    "oggUrl" : "https://firebasestorage.googleapis.com/v0/b/test-audio-b2355.appspot.com/o/baba.ogg?alt=media&token=58e036f5-05a0-46be-bd49-edb51e74f37b",
+    "oggUrl" : "https://firebasestorage.googleapis.com/v0/b/test-audio-b2355.appspot.com/o/baba.ogg?alt=media&amp;token=58e036f5-05a0-46be-bd49-edb51e74f37b",
   },
 ];
 
